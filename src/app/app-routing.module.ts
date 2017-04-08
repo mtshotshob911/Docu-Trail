@@ -16,32 +16,29 @@ import {SignDocumentComponent} from "./sign/Sign-Document.Component";
 const appRoutes: Routes = [
   {
     path: 'upload',
-    component: UploadDocumentComponent,
-    outlet: 'popup'
+    component: UploadDocumentComponent
   },
   {
         path: 'view',
         component: ViewDocumentComponent,
-        outlet: 'popup'
+
     },
     {
         path: 'review',
         component: ReviewDocumentComponent,
-        outlet: 'popup'
+
     },
     {
         path: 'search',
         component: SearchDocumentComponent,
-        outlet: 'popup'
     },
     {
         path: 'workflow',
         component: DocumentWorkFlowComponent,
-        outlet: 'popup'
     },
     { path: 'sign',
       component: SignDocumentComponent,
-        outlet: 'popup'
+
     },
   {
     path: 'admin',
@@ -59,6 +56,14 @@ const appRoutes: Routes = [
       { preloadingStrategy: SelectivePreloadingStrategy }
     )
   ],
+    declarations: [
+      UploadDocumentComponent,
+        ViewDocumentComponent,
+        ReviewDocumentComponent,
+        SearchDocumentComponent,
+        DocumentWorkFlowComponent,
+        SignDocumentComponent
+    ],
   exports: [
     RouterModule
   ],
